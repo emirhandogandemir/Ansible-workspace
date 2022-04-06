@@ -1,0 +1,7 @@
+- name : first playbook
+  hosts: localhosts
+  tasks:
+    - name: copy file bilal.sh
+      copy:
+        src: ~/Desktop/bilal.sh
+        dest: ~/Desktop/ansible
