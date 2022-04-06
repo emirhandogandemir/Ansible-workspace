@@ -1,0 +1,7 @@
+- name: shell module example
+  hosts: localhosts
+  tasks:
+    - name : listed on ansible uses grep
+      shell:
+        cmd: ls -l | grep copy >> copy.txt
+        chdir: ~/Desktop/ansible/

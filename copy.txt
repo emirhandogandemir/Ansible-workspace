@@ -1,0 +1,2 @@
+-rw-rw-r-- 1 emirhan emirhan   0 Apr  7 00:58 copy.txt
+-rw-rw-r-- 1 emirhan emirhan 160 Apr  6 13:03 copy.yaml
