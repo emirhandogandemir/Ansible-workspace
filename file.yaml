@@ -1,0 +1,7 @@
+- name: file module example
+  hosts: localhosts
+  tasks:
+    - name: create a directory
+      file:
+        path: ~/Desktop/ansible/selam
+        state: directory
