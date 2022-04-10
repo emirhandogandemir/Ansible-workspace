@@ -1,0 +1,9 @@
+- name : file2 example
+  hosts: all
+  tasks: 
+    - name: create a new file
+      file:
+        path: ~/Desktop/ansible/amanın
+        mode: 0664
+        owner: emirhan
+        state: touch
