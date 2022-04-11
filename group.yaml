@@ -7,3 +7,5 @@
     - name: create security group
       group: 
         name: security
+    - name: create group2 yaml file
+      import_tasks: group2.yaml
