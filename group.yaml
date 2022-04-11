@@ -1,0 +1,9 @@
+- name : create group module example
+  hosts: all
+  tasks:
+    - name: create developers group
+      group:
+        name: developers
+    - name: create security group
+      group: 
+        name: security
