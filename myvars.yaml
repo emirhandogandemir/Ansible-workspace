@@ -1,0 +1,14 @@
+port_nums: [21,22,23,25,80,443]
+
+users:
+  emirhan:
+    username: emirhan
+    uid: 100111212
+    shell: /bin/bash
+  hakki:
+    username: hakki
+    uid: 18101209219
+    shell : /bin/bash
+
+
+

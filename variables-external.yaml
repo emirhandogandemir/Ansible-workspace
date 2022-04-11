@@ -1,0 +1,10 @@
+- name : working external variables
+  hosts: all
+  vars_files: myvars.yaml
+  tasks:
+    - name : show second item in port_numbers
+      debug:
+        msg: Ssh port is {{ port_nums[1] }}
+    - name: show the uid of bob
+      debug:
+        msg: UID of bob is {{ users.emirhan.uid }}
