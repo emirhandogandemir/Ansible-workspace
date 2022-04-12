@@ -1,0 +1,9 @@
+- name: print some numbers
+  hosts: localhosts
+  tasks:
+    - name:
+      debug:
+        msg: Number {{ item }} is odd
+      loop: "{{ range(1,13) | list }}"
+      when: item %3 == 0  or
+            item %4 == 0 
