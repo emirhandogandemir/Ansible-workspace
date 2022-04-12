@@ -1,0 +1,9 @@
+- name: print-lists
+  hosts: all
+  vars:
+    prime: [2,3,5,7,11]
+  tasks:
+    - name: show first five prime numbers
+      debug:
+        msg: "{{ item }}"
+      loop: "{{ prime }}"
