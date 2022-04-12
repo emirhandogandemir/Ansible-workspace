@@ -1,0 +1,12 @@
+- name: Register PLaybook
+  hosts: all
+  tasks:
+    - name: Run a command
+      command: uptime
+      register: server_uptime
+    - name: Inscpect the server_uptime variable
+      debug:
+        var: server_uptime
+    - name:
+      debug:
+        msg: "{{ server_uptime.stdout }}"
