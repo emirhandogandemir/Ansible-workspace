@@ -1,0 +1,16 @@
+- name: Handling failure with blocks
+  hosts: localhosts
+  tasks:
+    - name: Handling error example
+      block:
+        - name: run a command
+          command: uptime
+        - name: run a bad command
+          command: balae
+        - name: This task will not run
+          debug:
+            msg: "bu task öncekinin yanlisligindan kaynaklı calısmıyacak"
+      rescue:
+        - name: Runs when the block failed
+          debug:
+            msg: "Block failed;  ..."
