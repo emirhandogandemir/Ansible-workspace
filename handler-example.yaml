@@ -1,0 +1,19 @@
+- name: simple handler example
+  hosts: localhosts
+  tasks:
+    - name: create engineers group
+      group:
+        name: engineers
+      notify: add emirhan
+    - name : another task in the play
+      debug:
+        msg: "I am just another task."
+
+ 
+  handlers:
+    - name : add emirhan
+      user:
+        name: emirhan
+        groups: engineers
+        append: yes
+ 
