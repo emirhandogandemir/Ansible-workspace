@@ -1,0 +1,9 @@
+- name: Reboot servers
+  hosts: all
+  tasks:
+    - name: Reboot ubuntu 16.04 servers
+      reboot:
+        msg: "Server is rebooting"
+      when: >
+        ansible_facts['distribution'] == "Ubuntu" and
+        ansible_facts['distribution_major_version'] == "16.04"
