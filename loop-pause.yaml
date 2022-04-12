@@ -1,0 +1,12 @@
+- name: Happy bitrhday playbook
+  hosts: localhosts
+  tasks:
+    - name: Ten seconds countdown
+      debug:
+        msg: "{{ 10 - item }} second remaining ... "
+      loop: "{{ range(10) | list }}"
+      loop_control:
+        pause: 1
+    - name: Display Happy Birthday
+      debug:
+        msg: "Happy Birtday!"
