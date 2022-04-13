@@ -1,0 +1,13 @@
+- name: Check if apache is working
+  hosts: localhosts
+  vars:
+    localhost_message: "ı am running to the finish line"
+  tasks:
+    - name: Start httpd
+      service:
+        name: httpd
+        state: started
+    - name: create index.html using jinja2
+      template:
+        src: index.j2
+        dest: /var/www/html/index.html
