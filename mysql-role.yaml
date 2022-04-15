@@ -1,0 +1,5 @@
+- name: applying geerlingguy.mysql rol
+  hosts: localhosts
+  roles:
+    - geerlingguy.mysql
+

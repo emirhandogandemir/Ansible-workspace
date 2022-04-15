@@ -1,0 +1,17 @@
+---
+# tasks file for httpd-role
+- name: install httpd
+  apt:
+    name: httpd
+    state: latest
+
+- name: start and enable httpd
+  service:
+    name: httpd
+    state: enabled
+    enabled: true
+
+- name: create index.html using jinja2
+  template:
+    src: index.j2
+    dest: /var/www/html/index.html
