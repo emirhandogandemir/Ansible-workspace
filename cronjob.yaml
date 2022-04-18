@@ -9,7 +9,7 @@
         minute: '*/2'
     - name: wait for five minitues
       pause:
-        minutes: 5
+        minutes: 1
     - name:
       cron:
         name: "two-mins"

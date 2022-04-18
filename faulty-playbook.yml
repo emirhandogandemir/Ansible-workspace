@@ -1,0 +1,9 @@
+- name: playbook logging enabled
+  hosts: localhosts
+  var:
+    blog: "Linux handbook"
+  tasks:
+    - name: print favourite Linux blog
+      debug:
+        msg: "{{ blog }}"
+
