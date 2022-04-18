@@ -1,0 +1,17 @@
+- name: Managing cron jobs
+  hosts: localhosts
+  tasks:
+    - name: Run this cron job every two mins
+      cron:
+        name: "two-mins"
+        user: emirhan
+        job: logger 'two minutes have passed'
+        minute: '*/2'
+    - name: wait for five minitues
+      pause:
+        minutes: 5
+    - name:
+      cron:
+        name: "two-mins"
+        user: emirhan
+        state: absent
