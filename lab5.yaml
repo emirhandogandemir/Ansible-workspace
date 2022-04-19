@@ -1,0 +1,7 @@
+- name: lab5 example
+  hosts: localhosts
+  tasks:
+    - name: even numbers output
+      debug:
+        msg: "{{ item }}"
+      loop: "{{ range(20,40,2) | list }}"
