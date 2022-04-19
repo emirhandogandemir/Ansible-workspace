@@ -1,0 +1,13 @@
+- name: lab3 homework 
+  hosts: all
+  tasks:
+    - name: nmap package install
+      package:
+        name: nmap
+        state: present
+
+    - name: archive
+      archive:
+        path: /home
+        dest: /tmp/home.tar.bz2
+        format: bz2
