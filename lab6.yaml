@@ -1,0 +1,8 @@
+- name: lab6 solution
+  hosts: all
+  tasks:
+    - name: package install nfs-utils
+      package:
+        name: nfs-utils
+        state: present
+      when: ansible_facts['distribution'] == "Ubuntu"
