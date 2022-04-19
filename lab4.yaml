@@ -1,0 +1,15 @@
+- name: lab4 solution
+  hosts: localhosts
+  tasks:
+    - name: free -h command
+      command: free -h
+      register: disk_free
+
+    - name: register display
+      debug:
+        msg: "{{ disk_free.stdout }}"
+
+    - name:
+      debug:
+        msg: IPv4 adress is {{ ansible_facts.default_ipv4.address }}
+
